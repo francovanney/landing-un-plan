@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useScrollFadeIn } from "./useScrollFadeIn";
+import DeviceMockups from "./DeviceMockups";
 
 /* ─── Icons (inline SVG helpers) ─── */
 const ChevronDown = ({ open }: { open: boolean }) => (
@@ -455,32 +456,36 @@ export default function App() {
       </nav>
 
       {/* ═══ HERO ═══ */}
-      <header className="relative overflow-hidden bg-gradient-to-br from-primary-950 via-primary-900 to-accent-600 pt-32 pb-24 md:pt-44 md:pb-36">
+      <header className="relative bg-gradient-to-br from-primary-950 via-primary-900 to-accent-600 pt-28 pb-20 md:pt-36 md:pb-28">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(139,92,246,0.3),transparent_60%)]" />
-        <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6">
-          <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-            La plataforma digital que tu municipio necesita para mostrar{" "}
-            <span className="text-accent-400">lo mejor de la ciudad</span>
-          </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-white/80 sm:text-xl">
-            Agenda de eventos, directorio de negocios y marca propia. Listo en
-            días, sin equipo técnico.
+        <div className="relative mx-auto max-w-5xl px-4 text-center sm:px-6">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-accent-400">
+            Plataforma para municipios
           </p>
-          <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
+            El sitio de tu ciudad,{" "}
+            <span className="text-accent-400">listo en días</span>
+          </h1>
+          <p className="mx-auto mt-4 max-w-2xl text-base text-white/70 sm:text-lg">
+            Agenda de eventos, directorio de negocios y marca propia. Sin equipo técnico.
+          </p>
+          <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <a
               href="#contacto"
-              className="rounded-full bg-white px-8 py-3.5 text-base font-bold text-primary-700 shadow-lg hover:bg-slate-100 transition"
+              className="rounded-full bg-white px-7 py-3 text-sm font-bold text-primary-700 shadow-lg hover:bg-slate-100 transition"
             >
               Agendar demo
             </a>
             <a
               href="#funcionalidades"
-              className="rounded-full border-2 border-white/30 px-8 py-3.5 text-base font-bold text-white hover:border-white/60 transition"
+              className="rounded-full border-2 border-white/30 px-7 py-3 text-sm font-bold text-white hover:border-white/60 transition"
             >
               Ver funcionalidades
             </a>
           </div>
         </div>
+        {/* Devices – hero focal point */}
+        <DeviceMockups />
       </header>
 
       {/* ═══ PROBLEMA ═══ */}
