@@ -444,7 +444,7 @@ export default function App() {
           {plans.map((plan, i) => (
             <div
               key={i}
-              className={`fade-in relative rounded-2xl p-8 shadow-sm transition-shadow hover:shadow-lg ${
+              className={`fade-in relative flex flex-col rounded-2xl p-8 shadow-sm transition-shadow hover:shadow-lg ${
                 plan.highlight
                   ? 'border-2 border-primary-500 bg-white ring-1 ring-primary-500/20'
                   : 'border border-slate-200 bg-white'
@@ -470,7 +470,7 @@ export default function App() {
               </p>
               <a
                 href="#contacto"
-                className={`mt-6 block rounded-full py-2.5 text-center text-sm font-bold transition ${
+                className={`mt-auto pt-6 block rounded-full py-2.5 text-center text-sm font-bold transition ${
                   plan.highlight
                     ? 'bg-primary-500 text-white hover:bg-primary-600'
                     : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
