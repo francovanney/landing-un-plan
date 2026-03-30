@@ -283,29 +283,6 @@ const plans = [
   },
 ];
 
-const additionalServices = [
-  {
-    name: "Carga inicial de datos",
-    desc: "Cargamos los primeros eventos y negocios para que el municipio arranque con contenido desde el día uno.",
-  },
-  {
-    name: "Redacción de contenido turístico",
-    desc: "Investigamos y redactamos la sección de información útil de la ciudad.",
-  },
-  {
-    name: "Diseño de identidad",
-    desc: "Creamos logo, paleta de colores y banner si el municipio no los tiene.",
-  },
-  {
-    name: "Capacitación adicional",
-    desc: "Sesiones extra para nuevos operadores del panel.",
-  },
-  {
-    name: "Migración de datos",
-    desc: "Importamos información de eventos y negocios desde otros sistemas existentes.",
-  },
-];
-
 const steps = [
   { num: 1, title: "Contacto", desc: "Nos contactan y eligen su plan." },
   {
@@ -870,25 +847,6 @@ export default function App() {
             </table>
           </div>
         </details>
-      </Section>
-
-      {/* ═══ SERVICIOS ADICIONALES ═══ */}
-      <Section id="servicios">
-        <SectionTitle
-          eyebrow="Servicios adicionales"
-          title="Acompañamos al municipio en lo que necesite"
-        />
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {additionalServices.map((s, i) => (
-            <div
-              key={i}
-              className="fade-in rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
-            >
-              <h3 className="mb-2 font-bold text-slate-800">{s.name}</h3>
-              <p className="text-sm text-slate-500 leading-relaxed">{s.desc}</p>
-            </div>
-          ))}
-        </div>
       </Section>
 
       {/* ═══ CASO DE REFERENCIA ═══ */}
