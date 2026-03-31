@@ -153,9 +153,9 @@ const benefits = [
     icon: "📣",
   },
   {
-    title: "Crecimiento orgánico",
-    text: "El formulario de contacto permite que nuevos comerciantes y promotores se acerquen solos. El directorio crece de forma natural.",
-    icon: "🌱",
+    title: "Oportunidad de ingresos",
+    text: "Cada administrador puede generar ingresos ofreciendo espacios publicitarios y sumando negocios o eventos interesados en tener presencia en el portal.",
+    icon: "💰",
   },
 ];
 
