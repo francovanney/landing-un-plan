@@ -864,35 +864,87 @@ export default function App() {
         </details>
       </Section>
 
-      {/* ═══ CASO DE REFERENCIA ═══ */}
+      {/* ═══ CASOS EN FUNCIONAMIENTO ═══ */}
       <Section id="referencia" className="bg-primary-950 text-white">
         <SectionTitle
-          eyebrow="Caso de referencia"
-          title="Un Plan en Junín — Ya funciona"
-          subtitle="La ciudad de Junín, provincia de Buenos Aires, es la primera ciudad en usar la plataforma."
+          eyebrow="Ya en funcionamiento"
+          title="Ciudades que ya usan la plataforma"
+          subtitle="Portales reales, activos y gestionados por sus propios equipos."
         />
-        <div className="fade-in mx-auto max-w-2xl rounded-2xl bg-white/10 backdrop-blur-sm p-8 text-center">
-          <p className="mb-6 leading-relaxed text-white/80">
-            En el sitio se pueden encontrar:
-          </p>
-          <ul className="space-y-3 text-left inline-block">
-            {[
-              "Agenda de eventos y shows con búsqueda y filtros",
-              "Directorio de restaurantes, hoteles, bares, actividades y comercios",
-              "Información turística: cómo llegar, emergencias, atractivos, transporte",
-              "Formulario de contacto para sumarse al directorio",
-            ].map((item, i) => (
-              <li key={i} className="flex items-start gap-2">
-                <CheckIcon />
-                <span className="text-white/90">{item}</span>
-              </li>
-            ))}
-          </ul>
-          <p className="mt-6 text-sm text-white/60">
-            La plataforma está activa y puede visitarse como ejemplo real de lo
-            que cada ciudad puede tener con su propia marca.
-          </p>
+        <div className="grid gap-8 md:grid-cols-2">
+          {/* Junín */}
+          <div className="fade-in flex flex-col rounded-2xl bg-white/10 backdrop-blur-sm p-8 text-center">
+            <h3 className="text-xl font-bold text-white mb-2 flex items-center justify-center gap-2">
+              <img
+                src="https://flagcdn.com/w40/ar.png"
+                alt="Argentina"
+                className="h-5 rounded-sm"
+              />
+              Un Plan en Junín
+            </h3>
+            <p className="text-sm text-white/60 mb-4">
+              Junín, Buenos Aires, Argentina
+            </p>
+            <ul className="space-y-3 text-left inline-block mb-6">
+              {[
+                "Agenda de eventos y shows con búsqueda y filtros",
+                "Directorio de restaurantes, hoteles, bares, actividades y comercios",
+                "Información turística: cómo llegar, emergencias, atractivos, transporte",
+                "Formulario de contacto para sumarse al directorio",
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-2">
+                  <CheckIcon />
+                  <span className="text-white/90">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <a
+              href="https://unplanenjunin.com.ar/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-auto inline-block rounded-full bg-white/20 px-6 py-2.5 text-sm font-semibold text-white hover:bg-white/30 transition"
+            >
+              Visitar sitio →
+            </a>
+          </div>
+          {/* Barcelona */}
+          <div className="fade-in flex flex-col rounded-2xl bg-white/10 backdrop-blur-sm p-8 text-center">
+            <h3 className="text-xl font-bold text-white mb-2 flex items-center justify-center gap-2">
+              <img
+                src="https://flagcdn.com/w40/es.png"
+                alt="España"
+                className="h-5 rounded-sm"
+              />
+              Buen Rollo Barcelona
+            </h3>
+            <p className="text-sm text-white/60 mb-4">Barcelona, España</p>
+            <ul className="space-y-3 text-left inline-block mb-6">
+              {[
+                "Agenda de eventos y actividades en Barcelona",
+                "Directorio de negocios y locales",
+                "Búsqueda y filtros para encontrar planes",
+                "Portal autónomo con marca propia",
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-2">
+                  <CheckIcon />
+                  <span className="text-white/90">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <a
+              href="https://buenrollobarcelona.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-auto inline-block rounded-full bg-white/20 px-6 py-2.5 text-sm font-semibold text-white hover:bg-white/30 transition"
+            >
+              Visitar sitio →
+            </a>
+          </div>
         </div>
+        <p className="fade-in mt-8 text-center text-sm text-white/50">
+          Cada portal es independiente, con su propia marca e identidad visual.
+          Visitá los sitios para ver en vivo lo que tu ciudad puede tener.
+        </p>
       </Section>
 
       {/* ═══ CÓMO EMPEZAR (Timeline) ═══ */}
