@@ -173,7 +173,7 @@ const brandItems = [
   { item: "Ícono", result: "Aparece en la pestaña del navegador" },
   {
     item: "Título",
-    result: '"Un Plan en [Tu Ciudad]" en la pestaña y al compartir',
+    result: '"Radar [Tu Ciudad]" en la pestaña y al compartir',
   },
   {
     item: "Descripción",
@@ -348,10 +348,6 @@ const faqs = [
     a: "Sí. Es un portal autónomo dedicado a eventos y negocios, con datos, marca y configuración completamente independientes.",
   },
   {
-    q: "¿Incluye actualizaciones?",
-    a: "Sí. Todos los planes incluyen actualizaciones y mejoras sin costo adicional.",
-  },
-  {
     q: "¿Qué pasa si necesitamos más categorías?",
     a: "El Plan Premium permite agregar categorías personalizadas además de las 5 estándar.",
   },
@@ -433,7 +429,7 @@ export default function App() {
       <nav className="fixed top-0 z-50 w-full border-b border-white/10 bg-primary-950/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
           <a href="#" className="text-lg font-bold text-white">
-            Un Plan en...
+            Radar
           </a>
           <div className="hidden md:flex items-center gap-6 text-sm font-medium text-white/80">
             <a href="#problema" className="hover:text-white transition">
@@ -469,8 +465,8 @@ export default function App() {
             Plataforma para municipios y ciudades
           </p>
           <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
-            El sitio de tu ciudad,{" "}
-            <span className="text-accent-400">listo en días</span>
+            <span className="text-accent-400">Radar</span>, el sitio de tu
+            ciudad, <span className="text-accent-400">listo en días</span>
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-base text-white/70 sm:text-lg">
             Agenda de eventos, directorio de negocios y marca propia. Sin equipo
@@ -528,7 +524,7 @@ export default function App() {
       <Section id="solucion">
         <SectionTitle
           eyebrow="La solución"
-          title={'"Un Plan en..." — El sitio de tu ciudad, listo en días'}
+          title={'"Radar" — El sitio de tu ciudad, listo en días'}
           subtitle="Una plataforma web que le da a cada ciudad su propio portal de eventos y directorio de negocios, con marca personalizada y contenido autogestionado."
         />
         <div className="grid gap-4 sm:grid-cols-2">
@@ -868,7 +864,7 @@ export default function App() {
       <Section id="referencia" className="bg-primary-950 text-white">
         <SectionTitle
           eyebrow="Ya en funcionamiento"
-          title="Ciudades que ya usan la plataforma"
+          title="Ciudades que ya usan Radar"
           subtitle="Portales reales, activos y gestionados por sus propios equipos."
         />
         <div className="grid gap-8 md:grid-cols-2">
@@ -880,7 +876,7 @@ export default function App() {
                 alt="Argentina"
                 className="h-5 rounded-sm"
               />
-              Un Plan en Junín
+              Un Plan En Junín
             </h3>
             <p className="text-sm text-white/60 mb-4">
               Junín, Buenos Aires, Argentina
@@ -1041,7 +1037,7 @@ export default function App() {
             Contacto
           </p>
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
-            ¿Querés llevar "Un Plan en..." a tu ciudad?
+            ¿Querés llevar "Radar" a tu ciudad?
           </h2>
           <p className="mt-4 text-lg text-white/80">
             Escribinos para agendar una demostración personalizada.
@@ -1065,9 +1061,19 @@ export default function App() {
 
       {/* ═══ FOOTER ═══ */}
       <footer className="border-t border-slate-200 bg-white py-8">
-        <p className="text-center text-sm text-slate-400">
-          "Un Plan en..." — El sitio de tu ciudad, listo en días.
-        </p>
+        <div className="flex align-center justify-center gap-2 flex-col sm:flex-row text-sm text-slate-400">
+          <p className="text-center text-sm text-slate-400">
+            Desarrollado por Pampa Code{" "}
+            <span>- {new Date().getFullYear()} -</span>
+          </p>
+          <a
+            href="https://www.pampacode.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            www.pampacode.com
+          </a>
+        </div>
       </footer>
     </div>
   );
