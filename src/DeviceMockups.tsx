@@ -25,7 +25,10 @@ function MacScreen() {
       {/* Fake cards grid */}
       <div className="grid grid-cols-3 gap-2">
         {[...Array(6)].map((_, i) => (
-          <div key={i} className="aspect-square rounded-lg bg-white/5 flex flex-col items-center justify-center gap-1 p-1">
+          <div
+            key={i}
+            className="aspect-square rounded-lg bg-white/5 flex flex-col items-center justify-center gap-1 p-1"
+          >
             <div className="w-4 h-4 rounded bg-white/8" />
             <div className="w-8 h-1.5 rounded bg-white/6" />
           </div>
@@ -53,7 +56,10 @@ function PhoneScreen() {
       {/* Fake event list */}
       <div className="flex flex-col gap-2 flex-1">
         {[...Array(3)].map((_, i) => (
-          <div key={i} className="flex items-center gap-2 rounded-lg bg-white/5 p-2">
+          <div
+            key={i}
+            className="flex items-center gap-2 rounded-lg bg-white/5 p-2"
+          >
             <div className="w-10 h-10 rounded-lg bg-white/8 shrink-0" />
             <div className="flex flex-col gap-1 flex-1">
               <div className="w-16 h-1.5 rounded bg-white/12" />

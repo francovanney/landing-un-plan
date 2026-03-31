@@ -48,7 +48,7 @@ const XIcon = () => (
 const problems = [
   {
     title: "Eventos perdidos en el ruido",
-    text: 'Se publican en Instagram, Facebook, WhatsApp... y el turista que llega no se entera. No hay un lugar centralizado donde consultar "¿qué puedo hacer hoy?".',
+    text: 'Se publican en Instagram, Facebook, WhatsApp... y la información queda dispersa. No hay un lugar centralizado donde consultar "¿qué puedo hacer hoy?".',
   },
   {
     title: "Negocios invisibles para el visitante",
@@ -88,7 +88,7 @@ const agendaFeatures = [
   "Filtro por fecha: elegí un día y ve qué pasa",
   "Filtro por categoría: música, teatro, deportes, gastronomía y más",
   "Eventos destacados en un carrusel principal",
-  'Organización automática: "Hoy", "Esta semana" y "Próximos eventos"',
+  'Organización automática de eventos: "Hoy", "Esta semana" y "Próximos eventos"',
 ];
 
 const directoryCategories = [
@@ -129,7 +129,7 @@ const infoUtilItems = [
 const benefits = [
   {
     title: "Presencia digital inmediata",
-    text: "Sitio web profesional en días, no en meses. Con logo, colores y nombre del municipio. Sin contratar desarrolladores ni comprar servidores.",
+    text: "Sitio web profesional en días, no en meses. Con logo, colores y nombre de la ciudad. Sin contratar desarrolladores ni comprar servidores.",
     icon: "🚀",
   },
   {
@@ -149,7 +149,7 @@ const benefits = [
   },
   {
     title: "Visible en redes sociales",
-    text: "Cuando alguien comparte el sitio, se muestra automáticamente el logo, título e imagen del municipio. Cada vez que alguien comparte, es publicidad gratuita.",
+    text: "Cuando alguien comparte el sitio, se muestra automáticamente el logo, título e imagen de la ciudad. Cada vez que alguien comparte, es publicidad gratuita.",
     icon: "📣",
   },
   {
@@ -179,7 +179,7 @@ const brandItems = [
     item: "Descripción",
     result: "Texto propio al compartir en redes sociales",
   },
-  { item: "Contacto", result: "Email, WhatsApp e Instagram del municipio" },
+  { item: "Contacto", result: "Email, WhatsApp e Instagram de la ciudad" },
 ];
 
 interface PlanFeature {
@@ -208,7 +208,13 @@ const planFeatures: PlanFeature[] = [
     label: "Personalización",
     inicial: "Básica",
     estandar: "Completa",
-    premium: "Completa + dominio propio",
+    premium: "Completa",
+  },
+  {
+    label: "Dominio",
+    inicial: "Incluido",
+    estandar: "Incluido",
+    premium: "Incluido",
   },
   {
     label: "Info útil",
@@ -219,14 +225,14 @@ const planFeatures: PlanFeature[] = [
   {
     label: "Soporte",
     inicial: "Email",
-    estandar: "Email + WhatsApp",
-    premium: "Dedicado",
+    estandar: "Email",
+    premium: "Email",
   },
   {
-    label: "Capacitación",
-    inicial: "Documentación",
+    label: "Introducción",
+    inicial: "Videollamada",
     estandar: "Videollamada",
-    premium: "Personalizada",
+    premium: "Videollamada",
   },
   { label: "Descuento anual", inicial: "15%", estandar: "15%", premium: "20%" },
 ];
@@ -234,22 +240,23 @@ const planFeatures: PlanFeature[] = [
 const plans = [
   {
     name: "Plan Inicial",
-    tagline: "Para municipios que quieren dar el primer paso.",
+    tagline: "Para ciudades que quieren dar el primer paso.",
     highlight: false,
     features: [
       "Hasta 20 eventos y 15 negocios",
       "3 categorías de negocio a elegir",
       "Personalización de color y logo",
       "Formulario de contacto vía WhatsApp",
-      "Soporte por email",
-      "Documentación del panel",
+      "Dominio de la app + subdominio de administración",
+      "Videollamada introductoria",
+      "Soporte por email si es necesario",
     ],
     ideal:
-      "Municipios pequeños o que quieren evaluar la plataforma antes de escalar.",
+      "Ciudades pequeñas o que quieren evaluar la plataforma antes de escalar.",
   },
   {
     name: "Plan Estándar",
-    tagline: "Para municipios con actividad turística real.",
+    tagline: "Para ciudades con actividad turística real.",
     highlight: true,
     badge: "Más elegido",
     features: [
@@ -258,12 +265,11 @@ const plans = [
       "Hasta 5 eventos destacados en el carrusel",
       "Personalización completa (banner, ícono, título, descripción)",
       "Sección de información útil personalizable",
-      "Subdominio incluido (ej: miciudad.unplanen.com.ar)",
-      "Soporte por email y WhatsApp (respuesta en 24h)",
-      "Videollamada de capacitación para el equipo",
+      "Dominio de la app + subdominio de administración",
+      "Videollamada introductoria",
+      "Soporte por email si es necesario",
     ],
-    ideal:
-      "Municipios medianos que quieren aprovechar al máximo la plataforma.",
+    ideal: "Ciudades medianas que quieren aprovechar al máximo la plataforma.",
   },
   {
     name: "Plan Premium",
@@ -273,10 +279,10 @@ const plans = [
       "Eventos y negocios ilimitados",
       "Categorías de negocio personalizadas",
       "Eventos destacados ilimitados",
-      "Dominio propio (ej: turismomiciudad.com.ar)",
+      "Dominio de la app + subdominio de administración",
       "Contenido de información útil redactado a medida",
-      "Soporte dedicado con persona de contacto asignada",
-      "Onboarding asistido: configuración, carga y capacitación",
+      "Videollamada introductoria",
+      "Soporte por email si es necesario",
       "Prioridad en nuevas funcionalidades",
     ],
     ideal:
@@ -289,7 +295,7 @@ const steps = [
   {
     num: 2,
     title: "Datos",
-    desc: "El municipio envía logo, colores y datos de contacto.",
+    desc: "La ciudad envía logo, colores y datos de contacto.",
   },
   {
     num: 3,
@@ -298,8 +304,8 @@ const steps = [
   },
   {
     num: 4,
-    title: "Capacitación",
-    desc: "Capacitamos al equipo que va a gestionar el contenido.",
+    title: "Introducción",
+    desc: "Videollamada introductoria para conocer el panel de administración.",
   },
   {
     num: 5,
@@ -314,8 +320,8 @@ const faqs = [
     a: "No. El contenido se carga desde un panel simple, como publicar en redes sociales. Cualquier persona puede operarlo.",
   },
   {
-    q: "¿Podemos tener nuestro propio dominio?",
-    a: "Sí. El Plan Premium incluye dominio propio (ej: turismomiciudad.com.ar). El Plan Estándar incluye un subdominio.",
+    q: "¿Qué dominios incluye cada plan?",
+    a: "Todos los planes incluyen el dominio de la aplicación principal y un subdominio para acceder al panel de administración.",
   },
   {
     q: "¿Los eventos viejos se borran solos?",
@@ -331,15 +337,15 @@ const faqs = [
   },
   {
     q: "¿Cómo llegan los mensajes de comerciantes que quieren sumarse?",
-    a: "Directo al WhatsApp del municipio. Sin intermediarios.",
+    a: "Directo al WhatsApp de la ciudad. Sin intermediarios.",
   },
   {
     q: "¿Se pueden cambiar los colores y el logo después de contratar?",
     a: "Sí, en cualquier momento y sin costo adicional.",
   },
   {
-    q: "¿Cada municipio tiene su propio sitio independiente?",
-    a: "Sí. Datos, marca y configuración completamente independientes.",
+    q: "¿Cada ciudad tiene su propio portal independiente?",
+    a: "Sí. Es un portal autónomo dedicado a eventos y negocios, con datos, marca y configuración completamente independientes.",
   },
   {
     q: "¿Incluye actualizaciones?",
@@ -456,18 +462,19 @@ export default function App() {
       </nav>
 
       {/* ═══ HERO ═══ */}
-      <header className="relative bg-gradient-to-br from-primary-950 via-primary-900 to-accent-600 pt-28 pb-20 md:pt-36 md:pb-28">
+      <header className="relative bg-linear-to-br from-primary-950 via-primary-900 to-accent-600 pt-28 pb-20 md:pt-36 md:pb-28">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(139,92,246,0.3),transparent_60%)]" />
         <div className="relative mx-auto max-w-5xl px-4 text-center sm:px-6">
           <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-accent-400">
-            Plataforma para municipios
+            Plataforma para municipios y ciudades
           </p>
           <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
             El sitio de tu ciudad,{" "}
             <span className="text-accent-400">listo en días</span>
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-base text-white/70 sm:text-lg">
-            Agenda de eventos, directorio de negocios y marca propia. Sin equipo técnico.
+            Agenda de eventos, directorio de negocios y marca propia. Sin equipo
+            técnico.
           </p>
           <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <a
@@ -492,7 +499,7 @@ export default function App() {
       <Section id="problema" className="bg-slate-50">
         <SectionTitle
           eyebrow="El problema"
-          title="Los municipios pierden turistas y oportunidades todos los días"
+          title="Las ciudades pierden turistas y oportunidades todos los días"
         />
         <div className="grid gap-6 md:grid-cols-2">
           {problems.map((p, i) => (
@@ -511,7 +518,7 @@ export default function App() {
           <p className="text-lg font-medium text-white/90 leading-relaxed">
             <strong className="text-white">Resultado:</strong> el turista se va
             sin conocer la mitad de lo que la ciudad ofrece. El vecino se pierde
-            eventos. El comerciante pierde clientes. Y el municipio pierde la
+            eventos. El comerciante pierde clientes. Y la ciudad pierde la
             oportunidad de dinamizar su economía local.
           </p>
         </div>
@@ -522,7 +529,7 @@ export default function App() {
         <SectionTitle
           eyebrow="La solución"
           title={'"Un Plan en..." — El sitio de tu ciudad, listo en días'}
-          subtitle="Una plataforma web que le da a cada municipio su propio portal de eventos y directorio de negocios, con marca personalizada y contenido gestionado por el propio municipio."
+          subtitle="Una plataforma web que le da a cada ciudad su propio portal de eventos y directorio de negocios, con marca personalizada y contenido autogestionado."
         />
         <div className="grid gap-4 sm:grid-cols-2">
           {solutionItems.map((s, i) => (
@@ -595,18 +602,24 @@ export default function App() {
               </div>
             ))}
           </div>
-          <p className="mt-6 text-slate-500 leading-relaxed">
+          <p className="mt-6 text-slate-500 leading-relaxed mb-2">
             Cada negocio tiene su <strong>ficha completa</strong>: nombre, logo,
-            descripción, dirección con mapa, teléfono, web, Instagram, YouTube,
-            menú, reservas y delivery. Un turista puede encontrar un
-            restaurante, ver su menú, hacer una reserva y llegar con el mapa —
-            todo desde la misma ficha.
+            descripción, dirección, teléfono, web, Instagram, YouTube, menú,
+            reservas y delivery. Un turista puede encontrar un restaurante, ver
+            su menú, hacer una reserva y llegar con el mapa — todo desde la
+            misma ficha.
+          </p>
+          <p>
+            Los negocios también se dividen en categorías para facilitar la
+            búsqueda que pueden ser creadas desde el panel de administración.
           </p>
         </div>
 
         {/* Info Útil */}
         <div className="fade-in mb-16">
-          <h3 className="mb-6 text-2xl font-bold">ℹ️ Información útil</h3>
+          <h3 className="mb-6 text-2xl font-bold">
+            ℹ️ Información útil de la ciudad
+          </h3>
           <p className="mb-4 text-slate-500">
             Sección dedicada con todo lo que el visitante necesita:
           </p>
@@ -625,7 +638,7 @@ export default function App() {
           <h3 className="mb-4 text-2xl font-bold">💬 Contacto directo</h3>
           <p className="text-slate-500 leading-relaxed">
             Promotores de eventos y comerciantes llenan un formulario simple y
-            el mensaje <strong>llega directo al WhatsApp del municipio</strong>.
+            el mensaje <strong>llega directo al WhatsApp de la ciudad</strong>.
             Sin emails que se pierden, sin trámites.
           </p>
         </div>
@@ -633,10 +646,7 @@ export default function App() {
 
       {/* ═══ BENEFICIOS ═══ */}
       <Section id="beneficios">
-        <SectionTitle
-          eyebrow="Beneficios"
-          title="Beneficios para el municipio"
-        />
+        <SectionTitle eyebrow="Beneficios" title="Beneficios para la ciudad" />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {benefits.map((b, i) => (
             <div
@@ -656,7 +666,7 @@ export default function App() {
         <SectionTitle
           eyebrow="Marca propia"
           title="Tu ciudad, tu identidad"
-          subtitle="Cada municipio recibe un sitio con su propia identidad visual. No es un sitio genérico: es el sitio del municipio."
+          subtitle="Cada ciudad recibe un portal con su propia identidad visual. No es el sitio oficial de la ciudad: es un portal autónomo dedicado 100% a eventos y negocios."
         />
         <div className="fade-in mx-auto max-w-2xl">
           <div className="divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden">
@@ -684,17 +694,17 @@ export default function App() {
         <SectionTitle
           eyebrow="Cómo funciona"
           title="Dos partes, un sistema simple"
-          subtitle="Se carga en el panel → aparece en el sitio. Así de simple."
+          subtitle="Se carga en el panel de administracion → aparece en el sitio. Así de simple."
         />
         <div className="fade-in grid gap-8 md:grid-cols-2">
           <div className="rounded-2xl bg-primary-50 p-8">
             <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary-500 text-2xl text-white">
               🏛️
             </div>
-            <h3 className="mb-3 text-xl font-bold text-primary-900">
-              Municipio
-            </h3>
-            <p className="mb-4 text-sm text-primary-800/60">Panel de gestión</p>
+            <h3 className="mb-3 text-xl font-bold text-primary-900">Ciudad</h3>
+            <p className="mb-4 text-sm text-primary-800/60">
+              Panel de administración
+            </p>
             <ul className="space-y-2">
               {[
                 "Carga eventos",
@@ -859,7 +869,7 @@ export default function App() {
         <SectionTitle
           eyebrow="Caso de referencia"
           title="Un Plan en Junín — Ya funciona"
-          subtitle="La ciudad de Junín, provincia de Buenos Aires, es el primer municipio en usar la plataforma."
+          subtitle="La ciudad de Junín, provincia de Buenos Aires, es la primera ciudad en usar la plataforma."
         />
         <div className="fade-in mx-auto max-w-2xl rounded-2xl bg-white/10 backdrop-blur-sm p-8 text-center">
           <p className="mb-6 leading-relaxed text-white/80">
@@ -880,7 +890,7 @@ export default function App() {
           </ul>
           <p className="mt-6 text-sm text-white/60">
             La plataforma está activa y puede visitarse como ejemplo real de lo
-            que cada municipio puede tener con su propia marca.
+            que cada ciudad puede tener con su propia marca.
           </p>
         </div>
       </Section>
@@ -889,7 +899,7 @@ export default function App() {
       <Section id="empezar">
         <SectionTitle
           eyebrow="Cómo empezar"
-          title="En 5 pasos el municipio tiene su propio sitio"
+          title="En 5 pasos la ciudad tiene su propio sitio"
         />
         {/* Timeline */}
         <div className="fade-in relative mx-auto max-w-3xl">
@@ -925,19 +935,18 @@ export default function App() {
         {/* What's needed */}
         <div className="fade-in mt-12 mx-auto max-w-xl rounded-2xl bg-primary-50 p-8">
           <h3 className="mb-4 text-center text-lg font-bold">
-            ¿Qué necesita el municipio para arrancar?
+            ¿Qué necesita la ciudad para arrancar?
           </h3>
           <p className="mb-4 text-center text-sm text-slate-500">
             Solo 5 cosas:
           </p>
           <ol className="space-y-2 list-decimal list-inside text-slate-700">
             <li>
-              <strong>Logo</strong> del municipio (imagen con fondo
-              transparente)
+              <strong>Logo</strong> de la ciudad (imagen con fondo transparente)
             </li>
             <li>
-              <strong>Color institucional</strong> (el color que identifica al
-              municipio)
+              <strong>Color institucional</strong> (el color que identifica a la
+              ciudad)
             </li>
             <li>
               <strong>Descripción breve</strong> de la ciudad (1-2 oraciones)
@@ -980,7 +989,7 @@ export default function App() {
             Contacto
           </p>
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
-            ¿Querés llevar "Un Plan en..." a tu municipio?
+            ¿Querés llevar "Un Plan en..." a tu ciudad?
           </h2>
           <p className="mt-4 text-lg text-white/80">
             Escribinos para agendar una demostración personalizada.
