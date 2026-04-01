@@ -194,10 +194,11 @@ const planFeatures: PlanFeature[] = [
   { label: "Negocios", inicial: "15", estandar: "50", premium: "Ilimitados" },
   {
     label: "Categorías",
-    inicial: "3",
-    estandar: "5",
+    inicial: "Standard",
+    estandar: "Standard",
     premium: "Personalizadas",
   },
+  /*
   {
     label: "Eventos destacados",
     inicial: false,
@@ -206,10 +207,11 @@ const planFeatures: PlanFeature[] = [
   },
   {
     label: "Personalización",
-    inicial: "Básica",
+    inicial: "Completa",
     estandar: "Completa",
     premium: "Completa",
   },
+  */
   {
     label: "Dominio",
     inicial: "Incluido",
@@ -218,7 +220,7 @@ const planFeatures: PlanFeature[] = [
   },
   {
     label: "Info útil",
-    inicial: "Genérica",
+    inicial: "Personalizable",
     estandar: "Personalizable",
     premium: "A medida",
   },
@@ -226,7 +228,7 @@ const planFeatures: PlanFeature[] = [
     label: "Soporte",
     inicial: "Email",
     estandar: "Email",
-    premium: "Email",
+    premium: "Whatsapp",
   },
   {
     label: "Introducción",
@@ -244,8 +246,9 @@ const plans = [
     highlight: false,
     features: [
       "Hasta 20 eventos y 15 negocios",
-      "3 categorías de negocio a elegir",
-      "Personalización de color y logo",
+      "7 categorías de negocio",
+      //"Personalización de colores y logo",
+      "Personalización completa (colores, logo, banner, etc)",
       "Formulario de contacto vía WhatsApp",
       "Dominio de la app + subdominio de administración",
       "Videollamada introductoria",
@@ -261,9 +264,9 @@ const plans = [
     badge: "Más elegido",
     features: [
       "Hasta 100 eventos y 50 negocios",
-      "Las 5 categorías de negocio",
-      "Hasta 5 eventos destacados en el carrusel",
-      "Personalización completa (banner, ícono, título, descripción)",
+      "7 categorías de negocio",
+      //"Hasta 5 eventos destacados en el carrusel",
+      "Personalización completa (colores, logo, banner, etc)",
       "Sección de información útil personalizable",
       "Dominio de la app + subdominio de administración",
       "Videollamada introductoria",
@@ -280,9 +283,9 @@ const plans = [
       "Categorías de negocio personalizadas",
       "Eventos destacados ilimitados",
       "Dominio de la app + subdominio de administración",
-      "Contenido de información útil redactado a medida",
+      "Contenido de información útil a medida",
       "Videollamada introductoria",
-      "Soporte por email si es necesario",
+      "Soporte por Whatsapp si es necesario",
       "Prioridad en nuevas funcionalidades",
     ],
     ideal:
